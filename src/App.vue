@@ -1,12 +1,33 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view/>
 </template>
 
-<style>
+<script>
+// import '../styles/fonts.css';
+</script>
+
+<style src="./styles/fonts.css">
+* {
+  margin: 0;
+  padding: 0;
+}
+
+button  {
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -14,17 +35,9 @@
   text-align: center;
   color: #2c3e50;
 }
+/*
+@media (min-width: 320px) {
 
-nav {
-  padding: 30px;
-}
+}*/
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
