@@ -26,11 +26,13 @@
 <style>
 nav {
   width: 100%;
-  height: 80px;
+  height: 66px;
   position: fixed;
   bottom: 0;
   z-index: 1;
-  background: #FFB26B;
+/*  background: #FFB26B;*/
+  background: #3c3c3c;
+  border-radius: 50px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   justify-items: center;
