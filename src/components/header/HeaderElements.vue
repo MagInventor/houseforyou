@@ -51,6 +51,7 @@
 
 <style>
 .heading .container {
+/*  height: 80px;*/
   display: grid;
   grid-template-columns: 20px auto;
 }
@@ -107,7 +108,7 @@ input[type=search] {
 }
 
 .head-elements__search {
-  height: 50px;
+  height: 40px;
   margin-right: 15px;
   display: flex;
   align-items: center;
@@ -130,8 +131,8 @@ input[type=search] {
 .head-elements__like,
 .head-elements__cart,
 .head-elements__user {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50px;
   display: flex;
   align-items: center;
