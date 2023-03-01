@@ -13,7 +13,7 @@
         <h1 class="home-page__content-title">Domki <span> dla zwierząt</span></h1>
         <div class="home-page__content-start">
           <p>Wybierz piękny dom dla swojego zwierzaka</p>
-          <button>Start</button>
+          <router-link to="/catalog"><button>Start</button></router-link>
         </div>
       </div>
     </div>
@@ -39,6 +39,10 @@ export default {
 body {
   padding: 0;
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 .container {
