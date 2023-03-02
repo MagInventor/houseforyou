@@ -7,36 +7,42 @@
             <!-- <span>OM</span> -->
         </router-link>
       </div>
-      <div class="head-elements">
-        <div class="head-elements">
-        <form class="head-elements__search" onsubmit="return false;" >
-          <input 
-            id="search"
-            type="search"
-            name="search"
-            placeholder="Czego shukasz?" 
-            autocomplete="off"
+      <form class="head-elements__search" onsubmit="return false;" >
+        <input 
+          class="hide" 
+          id="search"
+          type="search"
+          name="search"
+          placeholder="Czego shukasz?" 
+          autocomplete="off"
+
+        >
+         <button 
+          class="search"
 
           >
-           <button 
-            class="search"
-
-            >
-            <img alt="Search" class="head-elements__search_img" src="../../assets/icons/search.png">
-           </button>
-        </form>
-        <router-link to="/like" class="head-elements__like">
-          <img alt="Like" class="head-elements__like_img" src="../../assets/icons/favorite.png">
-          <!-- <p class="head-elements__like_quantity show-quantity">{{this.LIKE.length}}</p> -->
-        </router-link>
-        <router-link to="/cart" class="head-elements__cart">
-          <img alt="Cart" class="head-elements__cart_img" src="../../assets/icons/cart.png">
-          <!-- <p class="head-elements__cart_quantity show-quantity">{{this.CART.length}}</p> -->
-        </router-link>
-<!--         <router-link to="/user" class="head-elements__user">
-          <img alt="User" class="head-elements__user_img" src="../../assets/icons/user.png">
-        </router-link> -->
+          <img alt="Search" class="head-elements__search_img" src="../../assets/icons/search.png">
+         </button>
+      </form>
+      <div class="burger-menu">
+        <div class="burger-menu__img">
+          <img alt="menu" src="../../assets/burger-menu.png" width="25" height="25">
+        </div>
       </div>
+      <div class="head-elements">
+        <div class="head-elements__menu hide">
+          <router-link to="/like" class="head-elements__like">
+            <img alt="Like" class="head-elements__like_img" src="../../assets/icons/favorite.png">
+            <!-- <p class="head-elements__like_quantity show-quantity">{{this.LIKE.length}}</p> -->
+          </router-link>
+          <router-link to="/cart" class="head-elements__cart">
+            <img alt="Cart" class="head-elements__cart_img" src="../../assets/icons/cart.png">
+            <!-- <p class="head-elements__cart_quantity show-quantity">{{this.CART.length}}</p> -->
+          </router-link>
+          <router-link to="/user" class="head-elements__user">
+            <img alt="User" class="head-elements__user_img" src="../../assets/icons/user.png">
+          </router-link>
+        </div>
       </div>
     </div>
   </div>
@@ -51,10 +57,13 @@
 
 <style>
 .heading .container {
-/*  height: 80px;*/
-/*  background: #123123;*/
+  height: 80px;
+  padding: 0 20px;
+/*  background: #eeaabb;*/
   display: grid;
-  grid-template-columns: 20px auto;
+  grid-template-columns: 40px auto 40px;
+  align-content: center;
+  align-items: center;
 }
 
 .head-elements {
@@ -65,17 +74,12 @@
 }
 
 .logo {
-  width: 82px;
-  padding: 10px 14px;
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  color: #000;
-  font-weight: 100;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
-.logo-img{
+.logo-img {
   width: 40px;
   height: 40px;
 }
@@ -93,7 +97,7 @@ input[type=search] {
   width: 125px;
   border: 1px solid #e1dddb;
   border-radius: 50px;
-  padding-left: 7px;
+  padding-left: 9px;
   color: #e1dddb;
 }
 
@@ -111,12 +115,12 @@ input[type=search] {
 }
 
 .head-elements__search {
-  padding-top: 3px;
   height: 40px;
-  margin-right: 5px;
+  margin-right: 3;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
 }
 
 .head-elements__search button {
@@ -125,6 +129,10 @@ input[type=search] {
   background: transparent;
   border: transparent;
   cursor: pointer;
+}
+
+.burger-menu__img {
+  padding-left: 15px;
 }
 
 .head-elements__search button:hover {
@@ -185,6 +193,10 @@ background: #ffc18e;
 
 .show-quantity {
   display: block;
+}
+
+.hide {
+  display: none;
 }
 
 @media (min-width: 480px) {

@@ -25,8 +25,9 @@
 
 <style>
 nav {
-  width: 100%;
-  height: 66px;
+  width: calc(100% - 40px);
+  margin: 0 20px 20px 20px;
+  height: 60px;
   position: fixed;
   bottom: 0;
   z-index: 1;
