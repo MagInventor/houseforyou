@@ -33,9 +33,9 @@
           <img alt="Cart" class="head-elements__cart_img" src="../../assets/icons/cart.png">
           <!-- <p class="head-elements__cart_quantity show-quantity">{{this.CART.length}}</p> -->
         </router-link>
-        <router-link to="/user" class="head-elements__user">
+<!--         <router-link to="/user" class="head-elements__user">
           <img alt="User" class="head-elements__user_img" src="../../assets/icons/user.png">
-        </router-link>
+        </router-link> -->
       </div>
       </div>
     </div>
@@ -52,6 +52,7 @@
 <style>
 .heading .container {
 /*  height: 80px;*/
+/*  background: #123123;*/
   display: grid;
   grid-template-columns: 20px auto;
 }
@@ -60,6 +61,7 @@
   display: flex;
   flex-direction: row;
   justify-self: end;
+  align-items: center;
 }
 
 .logo {
@@ -90,6 +92,7 @@ span {
 input[type=search] {
   width: 125px;
   border: 1px solid #e1dddb;
+  border-radius: 50px;
   padding-left: 7px;
   color: #e1dddb;
 }
@@ -108,8 +111,9 @@ input[type=search] {
 }
 
 .head-elements__search {
+  padding-top: 3px;
   height: 40px;
-  margin-right: 15px;
+  margin-right: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,6 +159,14 @@ background: #ffc18e;
   height: 25px;
 }
 
+.head-elements__like_img {
+  margin-bottom: 1px;
+}
+
+.head-elements__cart_img {
+/*  margin-bottom: 2px;*/
+}
+
 .head-elements__like_quantity,
 .head-elements__cart_quantity {
   width: 18px;
@@ -173,5 +185,21 @@ background: #ffc18e;
 
 .show-quantity {
   display: block;
+}
+
+@media (min-width: 480px) {
+    input[type=search] {
+    width: 170px;
+  }
+}
+
+@media (min-width: 768px) {
+    input[type=search] {
+    width: 220px;
+  }
+}
+
+@media (min-width: 980px) {
+
 }
 </style>
