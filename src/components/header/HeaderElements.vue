@@ -24,13 +24,21 @@
           <img alt="Search" class="head-elements__search_img" src="../../assets/icons/search.png">
          </button>
       </form>
-      <div class="burger-menu">
+      <div class="burger-menu menu-hide">
         <div class="burger-menu__img">
           <img alt="menu" src="../../assets/burger-menu.png" width="25" height="25">
         </div>
+        <div class="burger-menu__list">
+          <router-link to="/catalog" class="burger-menu__list__katalog"><button>Katalog</button></router-link>
+          <router-link to="/about" class="burger-menu__list__about"><button>O nas</button></router-link>
+          <router-link to="/contacts" class="burger-menu__list__contacts"><button>Kontakty</button></router-link>
+          <router-link to="/like" class="burger-menu__list__like"><button>Podoba się</button></router-link>
+          <router-link to="/cart" class="burger-menu__list__cart"><button>Koszyk</button></router-link>
+          <router-link to="/user" class="burger-menu__list__user"><button>Użytkownik</button></router-link>
+        </div>
       </div>
-      <div class="head-elements">
-        <div class="head-elements__menu hide">
+      <div class="menu-desktop hide">
+        <div class="head-elements__menu">
           <router-link to="/like" class="head-elements__like">
             <img alt="Like" class="head-elements__like_img" src="../../assets/icons/favorite.png">
             <!-- <p class="head-elements__like_quantity show-quantity">{{this.LIKE.length}}</p> -->
@@ -59,7 +67,6 @@
 .heading .container {
   height: 80px;
   padding: 0 20px;
-/*  background: #eeaabb;*/
   display: grid;
   grid-template-columns: 40px auto 40px;
   align-content: center;
@@ -131,13 +138,68 @@ input[type=search] {
   cursor: pointer;
 }
 
+.burger-menu {
+  cursor: pointer;
+  position: relative;
+}
+
 .burger-menu__img {
   padding-left: 15px;
+}
+
+.burger-menu__list {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.burger-menu__list {
+  position: absolute;
+  top: 40px;
+  right: 0;
+}
+
+.burger-menu__list button {
+  width: 94px;
+  height: 29px;
+  background: transparent;
+  color: #000;
+  border: 0;
+  cursor: pointer;
+}
+
+.burger-menu__list button:hover {
+  background: #3c3c3c;
+  color: #fff;
+}
+
+.burger-menu__list a {
+  width: 94px;
+  height: 29px;
+  color: #000;
+  cursor: pointer;
+}
+
+.burger-menu__list a.router-link-exact-active {
+  width: 94px;
+  height: 29px;
+  padding: 5px 0;
+  color: #2c3e50;
+  background: #FFD56F;
+  font-weight: bold;
 }
 
 .head-elements__search button:hover {
   background: #ffc18e;
   border-radius: 0 3px 3px 0;
+}
+
+.head-elements__menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 6px
 }
 
 .head-elements__like,
@@ -206,8 +268,25 @@ background: #ffc18e;
 }
 
 @media (min-width: 768px) {
-    input[type=search] {
+  .heading .container {
+    grid-template-columns: 40px auto 120px;
+  }
+
+  .menu-hide {
+    display: none;
+  }
+
+  .menu-desktop {
+    display: block;
+  }
+
+  .head-elements__search {
+    margin-right: 5px;
+  }
+
+  input[type=search] {
     width: 220px;
+    display: block;
   }
 }
 
